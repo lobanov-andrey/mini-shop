@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { sideBarWidht } from 'modules/styleVariables'
+import { mediaQueris, sideBarWidht } from 'modules/styleVariables'
 
 export const cartStyle = css({
   display: 'flex',
@@ -13,6 +13,9 @@ export const cartSummStyle = css({
 export const cartProductsStyle = css({
   width: `calc(100% - ${sideBarWidht}px)`,
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
+  gridTemplateColumns: '1fr',
   gap: 8,
+  [mediaQueris[0]]: {
+    gridTemplateColumns: '1fr 1fr',
+  },
 })
